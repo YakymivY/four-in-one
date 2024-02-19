@@ -1,29 +1,29 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const cors = require('cors');
-
 const app = express();
+const path = require('path');
 const port = 3000;
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'public', 'template'));
 
-// Static files
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser());
-app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
 
+// app.get('/', (req, res) => {
+//   res.render('index'); // Render the 'index.ejs' template
+// });
 
-// Routes
-// const indexRoute = require('./routes/index');
-// const aboutRoute = require('./routes/about');
-// const dynamicPageRoute = require('./routes/dynamicPage');
+app.get('/', (req, res) => {
+  const teamMember = {
+    name: 'John Doe',
+    position: 'Software Developer',
+    description: 'A dedicated team member passionate about coding.',
+    photoUrl: '../images/Mr._Fresh.png',
+  };
 
-// app.use('/', indexRoute);
-// app.use('/about', aboutRoute);
-// app.use('/dynamic', dynamicPageRoute);
+  res.render('index', { teamMember });
+});
+
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
