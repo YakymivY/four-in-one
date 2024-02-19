@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple EJS Page</title>
+    <title>Team Member Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style_template.css">
 </head>
 <body>
-<h1>Welcome to my EJS Page</h1>
-<p>This is a simple EJS template example.</p>
-
-<ul>
-    <% for(let i = 1; i <= 5; i++) { %>
-        <li>Item <%= i %></li>
-    <% } %>
-</ul>
-
-<p>Current Date: <%= new Date().toDateString() %></p>
+<div class="container">
+    <img class="photo" src="<%= teamMember.photoUrl %>" alt="<%= teamMember.name %>">
+    <div class="details">
+        <h1><%= teamMember.name %></h1>
+        <h2><%= teamMember.position %></h2>
+        <p><%= teamMember.description %></p>
+    </div>
+</div>
 </body>
 </html>
