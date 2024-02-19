@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple EJS Page</title>
+</head>
+<body>
+<h1>Welcome to my EJS Page</h1>
+<p>This is a simple EJS template example.</p>
+
+<ul>
+    <% for(let i = 1; i <= 5; i++) { %>
+        <li>Item <%= i %></li>
+    <% } %>
+</ul>
+
+<p>Current Date: <%= new Date().toDateString() %></p>
+</body>
+</html>

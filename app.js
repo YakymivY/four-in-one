@@ -1,29 +1,17 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const cors = require('cors');
-
+const path = require('path');
 const app = express();
 const port = 3000;
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); // Set the view engine to EJS
+app.set('views', path.join(__dirname, 'public', 'template')); // Set the views directory
 
-// Static files
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser());
-app.use(cors());
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from the 'public' directory
 
-
-// Routes
-// const indexRoute = require('./routes/index');
-// const aboutRoute = require('./routes/about');
-// const dynamicPageRoute = require('./routes/dynamicPage');
-
-// app.use('/', indexRoute);
-// app.use('/about', aboutRoute);
-// app.use('/dynamic', dynamicPageRoute);
+app.get('/', (req, res) => {
+  res.render('index'); // Render the 'index.ejs' template
+});
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
