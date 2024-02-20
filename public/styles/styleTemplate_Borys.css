@@ -48,10 +48,7 @@ body {
 .header_line {
     height: 1px;
     width: 100%;
-    background: linear-gradient(to right,
-    rgba(255, 0, 0, 1),
-    rgba(255, 0, 180, 1),
-    rgba(0, 100, 200, 1));
+    background: #cc4729;
 ;
 }
 
@@ -73,9 +70,8 @@ body {
             rgb(0, 0, 0),
             rgb(0, 0, 0)),
             linear-gradient(to right,
-            rgba(255, 0, 0, 1),
-            rgba(255, 0, 180, 1),
-            rgba(0, 100, 200, 1));
+            #cc4729,
+            #cc4729);
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -240,9 +236,8 @@ justify-content: center}
     height: 30px;
     margin-top: 5%;
     background: linear-gradient(to right,
-    rgba(255, 0, 0, 1),
-    rgba(255, 0, 180, 1),
-    rgba(0, 100, 200, 1));
+    #e04e2d,
+    #4d1b0f);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,11 +245,10 @@ justify-content: center}
 
 .bar_end {
     position: absolute;
-    width: 32px; /* Adjust the width of the square */
+    width: 16px; /* Adjust the width of the square */
     height: 32px; /* Adjust the height of the square */
-    border: 3px solid black; /* Set the color and width of the border */
+    background-color: black;
     top: 50%;
-    border-radius: 16px;
     transform: translateY(-50%);
 }
 
