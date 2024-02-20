@@ -48,11 +48,7 @@ body {
 .header_line {
     height: 1px;
     width: 100%;
-    background: linear-gradient(to right,
-    rgba(255, 0, 0, 1),
-    rgba(255, 0, 180, 1),
-    rgba(0, 100, 200, 1));
-;
+    background: #43996a;
 }
 
 .menu {
@@ -73,9 +69,9 @@ body {
             rgb(0, 0, 0),
             rgb(0, 0, 0)),
             linear-gradient(to right,
-            rgba(255, 0, 0, 1),
-            rgba(255, 0, 180, 1),
-            rgba(0, 100, 200, 1));
+            #43996a,
+            #43996a,
+            #43996a);
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -116,7 +112,7 @@ a:hover {
 
 .main_details h2{
     font-size: 1.2rem;
-    color:#9575DE;
+    color:#43996a;
     margin: 1.2rem 0;
 }
 
