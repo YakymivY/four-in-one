@@ -92,8 +92,13 @@ a:hover {
     height: calc(100vh - 70px);
 }
 .main_photo {
-    margin-right: 7%;
-    max-width: 40%
+    width: 400px;
+    height: 400px;
+    background-image: url('../images/yura1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 40px;
 }
 
 .main_details{
@@ -238,9 +243,8 @@ a:hover {
     height: 30px;
     margin-top: 5%;
     background: linear-gradient(to right,
-    rgba(255, 0, 0, 1),
-    rgba(255, 0, 180, 1),
-    rgba(0, 100, 200, 1));
+    #4acf85,
+    #114528);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -248,11 +252,10 @@ a:hover {
 
 .bar_end {
     position: absolute;
-    width: 32px; /* Adjust the width of the square */
+    width: 16px; /* Adjust the width of the square */
     height: 32px; /* Adjust the height of the square */
-    border: 3px solid black; /* Set the color and width of the border */
+    background-color: black;
     top: 50%;
-    border-radius: 16px;
     transform: translateY(-50%);
 }
 
