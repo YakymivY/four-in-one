@@ -13,44 +13,49 @@
 <body>
 <header class="header">
     <div class="header_content">
-        <h1 class="title"><a href=""><b>4in1</b> Studio</a></h1>
+        <h1 class="title"><a href="index.html"><b>4in1</b> Studio</a></h1>
         <nav>
             <ul class="menu">
-                <li><a href="teamMember_Serhii.html" class="menu_link">Anchor 1</a></li>
-                <li><a href="" class="menu_link">Anchor 2</a></li>
-                <li><a href="" class="menu_link">Anchor 3</a></li>
+                <li><a href="" class="menu_link" onclick="scrollToTop()">Main info</a></li>
+                <li><a href="" class="menu_link">Hobby</a></li>
+                <li><a href="" class="menu_link">Personality</a></li>
             </ul>
         </nav>
     </div>
     <div class="header_line"></div>
 </header>
-<div class="main">
+<div class="main" id="main">
     <div class="main_photo"></div>
     <div class="main_details">
         <h1>Yurii</h1>
         <h2>CHIEF EXECUTIVE OFFICER, CEO</h2>
-        <p>Bekah is a front-end developer, and a big advocate for accessibility and performance on the web. With a previous career in events management, Bekah has a keen eye for detail and takes pride in crafting a polished user experience. When she’s not writing code, Bekah loves to travel and play video games, and one day plans to live up to her namesake and buy a farm. (E-I-E-I-O)
-
+        <p>
+            Experienced web-developer, who leads our team. Yurii's main benefit is responsibility, that is why he fits his position perfectly. He can motivate teammates to do their tasks as qualitive as possible. And when needed, help any member to cope with their task, thanks to his wide variety of skills. 
         </p>
     </div>
 </div>
-<div class="video_container">
+<div class="video_container" id="info">
     <div class="video_container_text">
         <p>
-            Engaging in the strategic and intellectually stimulating game of chess has become a source of immense joy and fascination for me, providing a platform to sharpen my analytical skills and strategic thinking.</p>
+            Yurii is keen on modern technologies and solutions, that is why he pays attantion to the crypto world. For him it is a great ecosystem not only for investments, but also for development. One of his next goals is to master blockchain programming. "It would be great to implement something majestic in this field." - he says.
+        </p>
     </div>
     <div class="video-photo">
-        <video src="../videos/golf.mp4" autoplay muted loop class="first_video"></video>
+        <video src="../videos/tm_Yurii2.mp4" autoplay muted loop class="first_video"></video>
         <div class="video-text">
-            <video class="video" src="../videos/video_sir.mp4" type="video/mp4" autoplay loop muted>
+            <h1 class="quote">"Don't follow the crowd, the crowd is misleading"</h1>
+            <video class="video" src="../videos/tm_Yurii1.mp4" type="video/mp4" autoplay loop muted>
                 Your browser does not support the video tag.
             </video>
-            <p>
-                Engaging in the strategic and intellectually stimulating game of chess has become a source of immense joy and fascination for me, providing a platform to sharpen my analytical skills and strategic thinking.</p>
         </div>
     </div>
+    <div class="bottom_text_container">
+        <p class="bottom_text">
+            Yurii's passion for cars can not be overrated. He likes completely everything related to them. It is one of the ways Yura distracts from the computer and programming. He started with the first car in 18 and gathered other enthusiasts around him. It has even outgrew into the whole local community of unique auto lovers.
+        </p>
+    </div>
 </div>
-<div class="personality-test">
+<div class="personality-test" id="personality">
     <div class="personality-test_icon-wrapper">
         <h4>His Personality</h4>
         <h3>Logistician (ISTJ-A)</h3>
@@ -88,6 +93,8 @@
         </div>
     </div>
 </div>
+
+<script src="../scripts/index.js"></script>
 
 </body>
 </html>

@@ -150,11 +150,8 @@ margin-bottom: 10vh;}
     padding-left: 2%;
     padding-right: 2%;}
 
-.text3 { grid-area: text3;
+.quote { grid-area: text3;
     font-size: 2.7rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color:#9575DE;}
 
 .photo1 { grid-area: photo1;

@@ -156,7 +156,8 @@ a:hover {
 .text2 { grid-area: text2;
     padding-right: 2%;
     font-size: 1.875rem;
-    margin: auto 0;}
+    margin: auto 0 auto 30px;
+    }
 
 
 .text3 { grid-area: text3;

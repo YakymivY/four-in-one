@@ -111,18 +111,18 @@ a:hover {
 
 .main_details h1{
     font-family: 'Montserrat', serif;
-    font-size: 2.5rem;
+    font-size: 3.125rem;
     margin:0;
 }
 
 .main_details h2{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color:#43996a;
     margin: 1.2rem 0;
 }
 
 .main_details p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: 95%;
     margin: 0;
 }
@@ -150,6 +150,11 @@ a:hover {
     margin-top:10vh;
 }
 
+.quote {
+    margin-left: 10%;
+    color: #43996a;
+}
+
 .video-text video{
     max-width:100%;
     padding-left: 10%;
@@ -175,6 +180,25 @@ a:hover {
     font-size: 2rem;
     width: 80%
 }
+
+.first_video {
+    width: 600px;
+}
+
+.bottom_text_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 150px;
+}
+
+.bottom_text {
+    font-size: 2rem;
+}
+
+
+
 
 .personality-test{
     margin: auto;
