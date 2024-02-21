@@ -120,6 +120,16 @@ a:hover {
     margin: 0;
 }
 
+.socials {
+    display: flex;
+    margin-top: 20px;
+}
+.social_img {
+    width: 28px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .main-video-container {
     margin: 15vh 0 0 0;
     width: 100%;

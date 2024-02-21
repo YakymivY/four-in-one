@@ -105,8 +105,6 @@ a:hover {
     max-width: 55%;
     display: flex;
     flex-direction: column;
-
-
 }
 
 .main_details h1{
@@ -125,6 +123,16 @@ a:hover {
     font-size: 1.5rem;
     width: 95%;
     margin: 0;
+}
+
+.socials {
+    display: flex;
+    margin-top: 20px;
+}
+.social_img {
+    width: 28px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .gif{
