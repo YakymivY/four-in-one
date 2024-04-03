@@ -121,7 +121,7 @@ a:hover {
   cursor: pointer;
 }
 
-.video_container {
+.main-video-container {
   margin-top: 15vh;
   display: grid;
   grid-template-columns: 1.4fr 0.6fr 1.7fr;
@@ -139,6 +139,10 @@ a:hover {
   grid-area: video1;
   width: 100%;
   margin-bottom: 10vh;
+}
+
+.video2{
+  display: none;
 }
 
 .text1 {
