@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Member Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="<%= style %>" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header_content">
+        <h1 class="title">
+          <a href="index.html"><b>4in1</b> Studio</a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li><a class="menu_link" onclick="scrollToTop()">Main Info</a></li>
+            <li>
+              <a class="menu_link" onclick="scrollToSection('hobby')">Hobby</a>
+            </li>
+            <li>
+              <a class="menu_link" onclick="scrollToSection('personality')"
+                >Personality</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_line"></div>
+    </header>
+    <div class="main" id="main">
+      <img class="main_photo" src="<%= main_photo %>" alt="Borys" />
+      <div class="main_details">
+        <h1><%= name %></h1>
+        <h2><%= position %></h2>
+        <p><%= description %></p>
+        <div class="socials">
+          <a href="<%= linkedin %>" target="_blank"
+            ><img src="../images/linkedin.png" alt="" class="social_img"
+          /></a>
+          <a href="<%= github %>" target="_blank"
+            ><img src="../images/github.png" alt="" class="social_img"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <div class="main-video-container" id="hobby">
+      <div class="text1"><%= text1 %></div>
+      <video class="video1" src="<%= video1 %>" autoplay loop muted></video>
+      <video class="video2" src="<%= video2 %>" autoplay loop muted></video>
+      <img class="photo1" src="<%= photo_replacement%>" alt="" />
+      <div class="text2">
+        <h1 class="quote"><%= quote %></h1>
+        <%= text2 %>
+      </div>
+      <div class="text3"><%- text3 %></div>
+    </div>
+    <div class="personality-test" id="personality">
+      <div class="personality-test_icon-wrapper">
+        <h4>My Personality</h4>
+        <h3><%= p_type %></h3>
+        <%- type_svg %>
+        <p><%= p_description %></p>
+      </div>
+      <div class="personality-test_scale-wrapper">
+        <h4>My Traits</h4>
+        <div class="scale">
+          <div class="bar">
+            <%- p_scale %>
+            <p class="bar_label1">Extraverted</p>
+            <div class="bar_end"></div>
+            <p class="bar_label2">Introverted</p>
+          </div>
+          <div class="bar">
+            <p class="bar_label1">Intuitive</p>
+            <div class="bar_end"></div>
+            <p class="bar_label2">Observant</p>
+          </div>
+          <div class="bar">
+            <p class="bar_label1">Thinking</p>
+            <div class="bar_end"></div>
+            <p class="bar_label2">Feeling</p>
+          </div>
+          <div class="bar">
+            <p class="bar_label1">Judging</p>
+            <div class="bar_end"></div>
+            <p class="bar_label2">Prospective</p>
+          </div>
+          <div class="bar">
+            <p class="bar_label1">Assertive</p>
+            <div class="bar_end"></div>
+            <p class="bar_label2">Turbulent</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/ce7a507610.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
