@@ -2,9 +2,10 @@ const express = require('express')
 
 const router = express.Router();
 
-
-router.get("/member/pm", (req, res) => {
+// reachable via /member/pm. member part is common in all these routes so I added it in app.use('/member', memberRoutes);
+router.get("/pm", (req, res) => {
     const teamMember = {
+      title: "Borys",
       name: "Borys",
       style: "../styles/styleTemplate_Borys.css",
       main_photo: "../images/tm_Borys.jpg",
@@ -855,8 +856,9 @@ router.get("/member/pm", (req, res) => {
     res.render("member", teamMember);
   });
 
-router.get("/member/designer", (req, res) => {
+router.get("/designer", (req, res) => {
   const teamMember = {
+    title: "Kate",
     name: "Kate",
     style: "../styles/styleTemplate_Kate.css",
     main_photo: "../images/tm_Kate.jpg",
@@ -1893,8 +1895,9 @@ router.get("/member/designer", (req, res) => {
   res.render("member", teamMember);
 });
 
-router.get("/member/ceo", (req, res) => {
+router.get("/ceo", (req, res) => {
   const teamMember = {
+    title: "Yurii",
     name: "Yurii",
     style: "../styles/styleTemplate_Yurii.css",
     main_photo: "../images/yura1.jpeg",
@@ -1940,8 +1943,9 @@ router.get("/member/ceo", (req, res) => {
 
 
 
-router.get("/member/dev", (req, res) => {
+router.get("/dev", (req, res) => {
   const teamMember = {
+    title: "Serhii",
     name: "Serhii",
     style: "../styles/styleTemplate_Serhii.css",
     main_photo: "../images/tm_sir.jpg",
