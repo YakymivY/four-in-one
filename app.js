@@ -1,48 +1,21 @@
-// const express = require('express');
-// const app = express();
-// const path = require('path');
-// const port = 3000;
-//
-// app.set('view engine', 'ejs');
-// app.set('views', path.join(__dirname, 'public', 'static'));
-//
-// app.use(express.static(path.join(__dirname, 'public')));
-//
-// app.get('/', (req, res) => {
-//   res.render('index'); // Render the 'index.ejs' template
-// });
-//
-// // app.get('/', (req, res) => {
-// //   const teamMember = {
-// //     name: 'John Doe',
-// //     position: 'Software Developer',
-// //     description: 'A dedicated team member passionate about coding.',
-// //     photoUrl: '../images/Mr._Fresh.png',
-// //   };
-// //
-// //   res.render('index', { teamMember });
-// // });
-//
-//
-// app.listen(port, () => {
-//   console.log(`Server is running at http://localhost:${port}`);
-// });
-
-const express = require('express');
-const path = require('path');
-
+const express = require("express");
 const app = express();
-const port = 3000; // You can use any port you prefer
+const path = require("path");
+const port = 3000;
 
-// Set the public static folder
-app.use(express.static(path.join(__dirname, 'public')));
+const memberRoutes = require('./routes/member') // including external routes
 
-// Define a route to serve your index.html
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'static', 'index.html'));
-});
+app.use(express.static(path.join(__dirname, "public"))); // so that express could serve static files like html or css from public folder
 
-// Start the server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
+
+app.use('/member', memberRoutes); // using external routes for requests which start from /member
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "static", "index.html"));
+}); // main page
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "public", "template"));
